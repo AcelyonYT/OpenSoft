@@ -1,10 +1,18 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// imports
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import electron from "vite-plugin-electron";
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    port: 3000,
-  }
+/**
+ * Configs the vite to use react
+ * and runs the server on our port
+ */
+export default defineConfig( {
+  plugins: [
+    react(),
+    electron({
+      entry: 'src/electron/index.ts',
+    }),
+  ],
 });
