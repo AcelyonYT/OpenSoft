@@ -1,0 +1,17 @@
+Simple Projects: level 1
+    Digital clock app
+    ToDo App
+    Rock, paper, scissors game
+    Note app
+Intermediate: level 2
+    space invader game
+    tetris game
+    pong game
+    snake game
+    calculator
+    web scraper
+    flash card app
+    contact manager
+Capstone: level 3
+    social media app
+    online forums

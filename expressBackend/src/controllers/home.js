@@ -3,8 +3,8 @@
  * @param {*} req request
  * @param {*} res response
  */
-export default function home(req, res) {
+export default function home(dir, req, res) {
 
-    res.send('This is the home page!');
+    res.sendFile(`${dir}/index.html`);
     
 }

@@ -1,17 +1,19 @@
 // imports
 import { Router } from 'express';
-import home from "./controllers/home.js";
-import about from "./controllers/about.js";
+import path from "path";
+import home from './controllers/home.js';
 
 /**
  * Creates a router variable so we
  * can start processing http request
  */
 const router = Router();
+const __dirname = path.resolve(path.dirname(""));
 
 // Processes GET request
-router.get("/", home);
-router.get("/about", about);
+router.get("/", (req, res) => {
+    home(__dirname, req, res);
+});
 
 // exports the router
 export default router;
