@@ -1,0 +1,16 @@
+// Variables
+$mainBackgroundColor: #000;
+$max: 100%;
+
+// resets padding and margins on everything
+* {
+    padding: 0;
+    margin: 0;
+}
+
+// Styling
+body {
+    background-color: $mainBackgroundColor;
+    width: $max;
+    height: $max;
+}

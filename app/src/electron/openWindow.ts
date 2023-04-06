@@ -15,9 +15,9 @@ export default class Window extends BrowserWindow {
      */
     constructor(){
         super({
-            title: "OpenSoft",
-            width: 800,
-            height: 600,
+            width: 1275,
+            height: 750,
+            frame: false,
             webPreferences: {
                 nodeIntegration: true,
             }

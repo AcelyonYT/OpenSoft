@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import '../scss/stylesheet.scss'
+import "../scss-css/stylesheet.scss"
 // Grabs the root div
 const RootDiv = document.getElementById('root');
 // Creates a new instance of the application

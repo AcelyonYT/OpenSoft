@@ -1,0 +1,57 @@
+/* Sets our background color */
+.background {
+    background-color: #b22222;
+}
+
+/* 
+    Styles the main part of the header bar
+    creates the grid area
+ */
+.headerContainer {
+    grid-area: header;
+}
+
+.headerTitle {
+    padding: 11px var(--padding) 11px var(--padding);
+    width: 100px;
+}
+
+/* 
+    Style for the a tag
+    creates the grid area
+    on hover change the style
+    a tag will act as a button
+ */
+.buttonContainer {
+    grid-area: buttons;
+    border-left: 1px solid gray;
+}
+
+.headerButton {
+    width: 20px;
+    float: right;
+    font-size: 20px;
+    padding: 13px var(--padding) 13px var(--padding);
+    text-align: center;
+}
+
+.headerButton:hover {
+    cursor: pointer;
+    color: lightgray;
+}
+
+/* 
+    Sets a grid layout in the header so we can
+    manage our content better
+ */
+header {
+    /* Variables for the whole header element */
+    --padding: 5px;
+
+    /* Actual style for the header */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 61px;
+    grid-template-areas: 
+    "header header buttons";
+}
