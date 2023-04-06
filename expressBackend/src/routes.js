@@ -1,7 +1,7 @@
 // imports
 import { Router } from 'express';
-import { home } from './controllers/home.js';
-import { about } from './controllers/about.js';
+import home from "./controllers/home.js";
+import about from "./controllers/about.js";
 
 /**
  * Creates a router variable so we

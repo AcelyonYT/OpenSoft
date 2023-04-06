@@ -12,7 +12,7 @@ export default defineConfig( {
   plugins: [
     react(),
     electron({
-      entry: 'src/electron/index.ts',
+      entry: 'src/index.ts',
     }),
   ],
 });
