@@ -8,6 +8,8 @@ const app = express();
 
 // Tells the app to use Cors
 app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded());
 
 // Tells our app to use routes.js file
 app.use("/", routes);

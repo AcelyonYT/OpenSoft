@@ -1,13 +1,13 @@
 // Imports
 import { BrowserWindow } from 'electron';
-import dotenv from 'dotenv';
-dotenv.config();
 
 /**
  * This class handles the windows properties
  * We export it to be used in our main electron file
  */
 export default class Window extends BrowserWindow {
+
+    // updater: Updater;
     
     /**
      * Builds our window
@@ -15,9 +15,11 @@ export default class Window extends BrowserWindow {
      */
     constructor(){
         super({
-            width: 1275,
-            height: 750,
+            width: 1255,
+            height: 745,
             frame: false,
+            show: false,
+            resizable: false,
             webPreferences: {
                 nodeIntegration: true,
             }
@@ -30,18 +32,18 @@ export default class Window extends BrowserWindow {
      * open dev tools
      * and loads the build file
      */
-    displayWindow() {
-        this.removeMenu();
+    async displayWindow() {
+        this.show();
         if( import.meta.env.DEV) {
-            this.loadFile(String(process.env.URL));
             this.webContents.openDevTools();
         }
         else{
             this.webContents.on('devtools-opened', () => {
                 this.webContents.closeDevTools();
             });
-            this.loadFile(String(process.env.URL));
         }
+        this.removeMenu();
+        this.loadFile(String(process.env.URL));
     }
 
     /**
@@ -49,7 +51,7 @@ export default class Window extends BrowserWindow {
      * @returns false if we have 0 windows open
      *          true if we have windows open
      */
-    openedWindows(window: Window) {
+    openedWindows() {
         const numberOfWindows = Window.getAllWindows().length;
         if(numberOfWindows === 0) return false;
         return true;

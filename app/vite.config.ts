@@ -15,4 +15,12 @@ export default defineConfig( {
       entry: 'src/index.ts',
     }),
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        main: "./html/index.html",
+        updater: "./html/updater.html"
+      }
+    }
+  }
 });

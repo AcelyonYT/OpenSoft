@@ -1,3 +1,7 @@
+UPDATER
+    Checks the project for updates
+    Downlaods the most recent update file
+    Then runs the file
 Simple Projects: level 1
     Digital clock app
     ToDo App

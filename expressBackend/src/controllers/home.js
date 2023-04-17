@@ -1,5 +1,6 @@
 /**
  * Sends the home page contents
+ * @param {*} dir directory
  * @param {*} req request
  * @param {*} res response
  */
